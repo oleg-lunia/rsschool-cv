@@ -1,4 +1,4 @@
-#**Oleg Lunia**  
+# Oleg Lunia   
 **Contacts:**
 * *Email:* oleglynja2@gmail.com;
 * *Phone:* +375(29) 77-99-146;
