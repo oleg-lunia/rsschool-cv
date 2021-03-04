@@ -1,0 +1,55 @@
+body {
+    background-color: #ececec;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    position: relative;
+}
+
+.header a {
+    font-weight: 500;
+}
+
+.contacts h2 {
+    font-size: 20px;
+}
+
+.header::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 700px;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: black;
+    transform: translate(-50%, 50px);
+}
+
+img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.content {
+    padding-top: 100px;
+}
+
+span {
+    font-weight: 900;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+    font-weight: 700;
+}
