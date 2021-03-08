@@ -1,36 +1,180 @@
-body {
-    background-color: #ececec;
+@font-face {
+    font-family: "Poppins";
+    src: url("./fonts/Poppins-Regular.woff2") format("woff2"), url("./fonts/Poppins-Regular.woff") format("woff");
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
+
+
+body {
+    background-color: #e4e9ea;
+    margin: 0;
+    font-family: "Poppins", sans-serif ;
 }
-.header {
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+
+a {
+    text-decoration: none;
+    color: #676767;
+    padding: 5px;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+p {
+   color: #676767;
+   margin: 0;
+}
+
+header {
+    background-color: #353739;
+    height: 200px;
     display: flex;
-    justify-content: space-between;
-    padding-top: 50px;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 10px;
+}
+
+h1 {
+    color: #d4d6d8;
+    text-transform: uppercase;
+    border: solid 2px #d4d6d8;
+    padding: 5px 20px;
+    font-size: 50px;
     position: relative;
 }
 
-.header a {
-    font-weight: 500;
-}
-
-.contacts h2 {
-    font-size: 20px;
-}
-
-.header::after {
-    content: "";
+h1::after {
+    content: "Front-end Developer";
     display: block;
     position: absolute;
-    width: 700px;
+    font-size: 24px;
+    letter-spacing: 2px;
+    color: #353739;
+    background-color: #d4d6d8;
+    bottom: -21px;
+    left: 10%;
+    padding: 0 10px;
+}
+
+main {
+    display: flex;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 40px 10px;
+    text-align: justify;
+}
+
+section {
+    max-width: 700px;
+    margin-right: 30px;
+    overflow: hidden;
+}
+section h2 {
+    padding-left: 25px;
+}
+
+section h2::before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    top: 0px;
+    color: #353739;
+}
+
+
+h2 {
+    text-transform: uppercase;
+    position: relative;
+}
+
+.about h2::after {
+    content: "";
+    position: absolute;
     height: 2px;
-    bottom: 0;
-    left: 50%;
-    background-color: black;
-    transform: translate(-50%, 50px);
+    width: 77%;
+    left: 161px;
+    top: 16px;
+    background-color: #353739;
+}
+
+.skills h2::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 84%;
+    left: 114px;
+    top: 16px;
+    background-color: #353739;
+}
+
+.skills ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills ul li {
+    margin: 0 10px 10px 0;
+    padding: 0 14px;
+    background-color: #d4d6d8;
+}
+
+.code h2::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 85%;
+    left: 109px;
+    top: 16px;
+    background-color: #353739;
+}
+
+.code a {
+    font-weight: 700;
+    color: #353739;
+}
+
+.education h2::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 75%;
+    left: 178px;
+    top: 16px;
+    background-color: #353739;
+}
+
+
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 390px;
+    position: relative;
+    margin-top: 24px;
+}
+
+aside::before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    background-color: #353739;
+    left: 0;
+    top: 0;
+}
+
+aside li {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 img {
@@ -40,16 +184,67 @@ img {
     border-radius: 50%;
 }
 
-.content {
-    padding-top: 100px;
+.education-hearer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-span {
-    font-weight: 900;
+footer {
+    background-color: #353739;
+    height: 100px;
 }
 
-a {
-    text-decoration: none;
-    color: blue;
-    font-weight: 700;
+.footer-content {
+    display: flex;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 10px;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+footer ul {
+    display: flex;
+}
+
+footer li+li {
+    margin-left: 25px;
+}
+
+footer svg {
+    height: 25px;
+}
+
+
+@media (max-width: 720px) {
+    main {
+        flex-direction: column-reverse;
+    }
+    aside::before {
+        display: none;
+    }
+    aside {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+    h1::after {
+        position: relative;
+        font-size: 3vw;
+        text-align: center;
+        left: 0;
+        bottom: 0;
+    }
+
+    .education-item {
+        text-align: center;
+    }
+    
+    .education-hearer {
+        flex-direction: column;
+    }
 }
